@@ -1,0 +1,333 @@
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  .hsmc-wrap {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #262626;
+    line-height: 1.6;
+  }
+  .hsmc-wrap h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #d6323a;
+    display: inline-block;
+  }
+  .hsmc-heading-row {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .hsmc-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 24px 20px;
+    max-width: 300px;
+    flex: 1 1 260px;
+  }
+  .hsmc-card + h1 {
+    margin-top: 32px;
+  }
+  .hsmc-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hsmc-card li {
+    margin-bottom: 12px;
+  }
+  .hsmc-card a {
+    color: #d6323a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+  }
+  .hsmc-card a:hover {
+    color: #d6323a;
+    text-decoration: underline;
+  }
+  .hsmc-card a::after {
+    content: " \2197";
+    font-size: 12px;
+    color: #999;
+  }
+  .hsmc-note {
+    font-size: 13px;
+    color: #666;
+  }
+  .hsmc-accordion {
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+  }
+  .hsmc-accordion summary {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 14px 18px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.15s ease;
+  }
+  .hsmc-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+  .hsmc-accordion summary::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #d6323a;
+    border-bottom: 2px solid #d6323a;
+    border-radius: 0 0 2px 0;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .hsmc-accordion[open] summary::after {
+    transform: rotate(225deg);
+  }
+  .hsmc-accordion summary:hover {
+    background-color: #f0f0f0;
+  }
+  .hsmc-hero {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 24px auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  .hsmc-hero img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+  }
+  .hsmc-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 55%);
+    pointer-events: none;
+  }
+  .hsmc-hero-card {
+    position: absolute;
+    z-index: 2;
+    left: 28px;
+    bottom: 24px;
+    right: 28px;
+    max-width: 480px;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-left: 5px solid #d6323a;
+    border-radius: 8px;
+    padding: 18px 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .hsmc-hero-card h2 {
+    margin: 0;
+    color: #d6323a;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .hsmc-accordion-body {
+    padding: 0 18px 16px;
+  }
+  .hsmc-accordion-body p {
+    margin: 10px 0 4px;
+    font-weight: 500;
+  }
+  .hsmc-accordion-body ul {
+    margin: 0 0 10px;
+    padding-left: 20px;
+    color: #444;
+  }
+</style>
+
+<div class="hsmc-wrap">
+    <!-- Top Bar w/ Logo -->
+  <div style="background: white; padding: 10px 20px; display: flex; align-items: center;">
+    <img src="../resources/logo.png" alt="Logo" style="height: 40px;">
+  </div>
+
+  <!-- Red Bar -->
+  <div style="background: #d6323a; color: white; padding: 15px 20px; font-size: 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <span> Markham Campus</span>
+  </div>
+
+  <!-- Image with Text Overlay -->
+  <div class="hsmc-hero">
+    <img src="../resources/campus.jpg" alt="Campus image">
+    <div class="hsmc-hero-card">
+      <h2>Health and Safety at Markham Campus</h2>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 50px; padding: 0 20px;">
+
+    <div class="hsmc-card">
+      <div class="hsmc-heading-row"><h1>General</h1></div>
+      <ul>
+        <li><a href="https://yulink-new.yorku.ca/group/yulink/first-aid-program?p_p_auth=MWBfC0oY&p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=/asset_publisher/view_content&_101_returnToFullPageURL=/group/yulink/first-aid-program?inheritRedirect%3Dtrue&_101_assetEntryId=1359554&_101_type=document&_101_showComments=true&_101_redirect=https://yulink-new.yorku.ca/group/yulink/first-aid-program?p_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_yorku-default-search%3Dtrue%26_3_keywords%3Dhealth%2Bbulleting%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fgroup%252Fyulink%252Ffirst-aid-program%253FinheritRedirect%253Dtrue%26_3_yorku-groupid%3D0" target="_blank">Health and Safety Bulletin Boards</a></li>
+        <li><a href="https://yulink-new.yorku.ca/group/yulink/working-alone-program1" target="_blank">Working Alone Program</a><br><span class="hsmc-note">(there is a form in this)</span></li>
+        <li><a href="https://yulink-new.yorku.ca/documents/20182/1360664/Slips%2c+Trips%2c+and+Falls+Prevention+Program/6241fded-1f5b-45f4-9391-178f90559f99" target="_blank">Slips, Trips, and Fall Prevention</a></li>
+        <li><a href="https://www.yorku.ca/safety/app/" target="_blank">YorkU Safety App</a></li>
+      </ul>
+    </div>
+
+    <div class="hsmc-card">
+      <div class="hsmc-heading-row"><h1>Lab Safety</h1></div>
+      <ul>
+        <li><a href="https://yulink-new.yorku.ca/documents/20182/92034/Eyewash+and+Emergency+Shower+Guideline/97ee377e-71ad-4a1b-8e0a-533579080049" target="_blank">Eyewash and Emergency Shower Guideline</a></li>
+        <li><a href="http://yulink-new.yorku.ca/documents/20182/29507656/YU+LABORATORY+DESIGN+GUIDELINES.pdf/f9b817e7-5a17-4566-bd58-f493da05c2d0" target="_blank">Lab Design Guidelines</a></li>
+        <li><a href="https://yulink-new.yorku.ca/documents/20182/29507656/YU+Fume+Hood+Standard.pdf/54668d25-3768-431c-b450-3a7fc814ff0c" target="_blank">Fume Hood Standard</a></li>
+      </ul>
+    </div>
+
+    <div class="hsmc-card">
+      <div class="hsmc-heading-row"><h1>Forms</h1></div>
+      <ul>
+        <li><a href="https://yulink-new.yorku.ca/documents/872311/0/Workplace+Incident+Report+%28WIR%29+-+July+2019.pdf/85f23d92-5aff-4f7d-ab33-c467c4ec3a38" target="_blank">Workplace Incident Report</a></li>
+      </ul>
+    </div>
+
+    <div class="hsmc-card">
+      <div class="hsmc-heading-row"><h1>Programs</h1></div>
+      <ul>
+        <li><a href="https://yulink-new.yorku.ca/documents/20182/1360664/First+Aid+Program/b1ac5adb-1d09-4985-bb0b-ec0155717dde" target="_blank">First Aid Program</a></li>
+        <li><a href="https://yulink-new.yorku.ca/group/yulink/biosafety" target="_blank">Biosafety Resources</a></li>
+        <li><a href="https://yulink-new.yorku.ca/group/yulink/health-and-safety-programs" target="_blank">Compressed Gas Safety</a></li>
+        <li><a href="https://yulink-new.yorku.ca/group/yulink/electrical-safety-program" target="_blank">Electrical Safety Program</a></li>
+        <li><a href="https://yulink-new.yorku.ca/documents/20182/10562869/Ergonomics+and+Musculoskeletal+Disorders+%28MSD%29+Prevention+Program/2765b714-547a-4da7-bc45-4aa05b8710ab" target="_blank">Ergonomics Program</a></li>
+        <li><a href="https://yulink-new.yorku.ca/documents/20182/1360664/Health+%26+Safety+Officer+%28HSO%29+Program+%28PDF%29/27829021-0eb9-401a-a7f0-9968f1cf1d61" target="_blank">Health and Safety Officers Program</a></li>
+      </ul>
+    </div>
+
+    <div class="hsmc-card">
+      <div class="hsmc-heading-row"><h1>Other Resources</h1></div>
+      <ul>
+        <li><a href="http://yulink-new.yorku.ca/documents/20182/6878449/Employee+Incident+Process+Flow+Chart/bdd19993-277f-48ae-a0d2-9e5843c44c30" target="_blank">Incident Process Flow Chart</a></li>
+        <li><a href="https://yulink-new.yorku.ca/group/yulink/reporting-workplace-injuries-accidents" target="_blank">Incident Reporting Employee</a><br><span class="hsmc-note">(<i>Passport York Required</i>)</span></li>
+        <li><a href="https://www.yorku.ca/riskmanagement/incident-reporting/" target="_blank">Incident Reporting Student</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr style="max-width: 900px; margin: 50px auto; border: none; border-top: 1px solid #e5e5e5;">
+
+  <div class="hsmc-heading-row"><h1>Resources Across the Building</h1></div>
+
+  <div style="max-width: 700px; margin: 20px auto 60px; padding: 0 20px;">
+
+    <details class="hsmc-accordion">
+      <summary>First Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>MKH 1001 - Community Safety Office</p>
+        <ul>
+          <li>AED</li>
+          <li>First Aid Kit</li>
+        </ul>
+        <p>Health and Safety Board - between Electrical Room(1210) and 1014</p>
+        <p>Emergency Safety Phone -</p>
+        <ul>
+          <li>Elevator Lobby Floor 1</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="hsmc-accordion">
+      <summary>Second Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>Multi Faith / Spiritual Reflection Room - 2000</p>
+        <p>AED located between Female(2505) and Accessible Washroom(2500)</p>
+      </div>
+    </details>
+
+    <details class="hsmc-accordion">
+      <summary>Third Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>MKH 3025C Library Administrative Space</p>
+        <ul>
+          <li>Health and Safety Board</li>
+          <li>First Aid Kit</li>
+        </ul>
+        <p>AED located between Female(3505) and Accessible Washroom(3500)</p>
+        <p>Emergency Safety Phone -</p>
+        <ul>
+          <li>Elevator Lobby</li>
+          <li>Stairwell - C</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="hsmc-accordion">
+      <summary>Fifth Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>AED located between Female(5505) and Accessible Washroom(5500)</p>
+      </div>
+    </details>
+
+    <details class="hsmc-accordion">
+      <summary>Sixth Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>MKH 6036 - Preparation Room Physics</p>
+        <ul>
+          <li>Eye Wash</li>
+        </ul>
+        <p>MKH 6040 - Science Dep. Office</p>
+        <ul>
+          <li>First Aid</li>
+        </ul>
+        <p>MKH 6045 - Biology Lab</p>
+        <ul>
+          <li>Emergency Eye Wash</li>
+          <li>Emergency Shower</li>
+        </ul>
+        <p>MKH 6050 - Preparation Room Biology</p>
+        <ul>
+          <li>Emergency Eye Wash</li>
+        </ul>
+        <p>MKH 6060 - Preparation Room Chemistry</p>
+        <ul>
+          <li>Emergency Eye Wash</li>
+          <li>Emergency Shower</li>
+        </ul>
+        <p>MKH 6065 - Chemistry Lab</p>
+        <ul>
+          <li>Emergency Eye Wash</li>
+          <li>Emergency Shower</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="hsmc-accordion">
+      <summary>Seventh Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>AED located between Female(7505) and Accessible Washroom(7500)</p>
+        <p>Health and Safety Board located in 7078</p>
+      </div>
+    </details>
+
+    <details class="hsmc-accordion">
+      <summary>Ninth and Tenth Floor</summary>
+      <div class="hsmc-accordion-body">
+        <p>Not accessible to community members.</p>
+      </div>
+    </details>
+
+  </div>
+
+</div>
