@@ -69,41 +69,66 @@
     color: #6c757d;
   }
   .hsmc-accordion {
-    margin-bottom: 10px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-    overflow: hidden;
+    margin-bottom: 0;
   }
   .hsmc-accordion summary {
+    background: #ffffff;
+    border-bottom: 1px solid #ccc;
+    color: #212529;
     font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
     cursor: pointer;
-    padding: 14px 18px;
+    padding: 14px 4px;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: background-color 0.15s ease;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   }
   .hsmc-accordion summary::-webkit-details-marker {
     display: none;
   }
-  .hsmc-accordion summary::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #e31837;
-    border-bottom: 2px solid #e31837;
-    border-radius: 0 0 2px 0;
-    transform: rotate(45deg);
-    transition: transform 0.2s ease;
+  .hsmc-accordion[open] summary {
+    background: #e31837;
+    color: #ffffff;
+    border-bottom: 0;
+  }
+  .hsmc-accordion-icon {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 14px;
+    margin-left: 10px;
     flex-shrink: 0;
   }
-  .hsmc-accordion[open] summary::after {
-    transform: rotate(225deg);
+  .hsmc-accordion-icon::before,
+  .hsmc-accordion-icon::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    width: 9px;
+    height: 3px;
+    background-color: #e31837;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
   }
-  .hsmc-accordion summary:hover {
-    background-color: #f0f0f0;
+  .hsmc-accordion-icon::before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+  .hsmc-accordion-icon::after {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+  .hsmc-accordion[open] .hsmc-accordion-icon::before,
+  .hsmc-accordion[open] .hsmc-accordion-icon::after {
+    background-color: #ffffff;
+  }
+  .hsmc-accordion[open] .hsmc-accordion-icon::before {
+    transform: rotate(-45deg);
+  }
+  .hsmc-accordion[open] .hsmc-accordion-icon::after {
+    transform: rotate(45deg);
   }
   .hsmc-hero {
     position: relative;
@@ -151,7 +176,8 @@
     line-height: 1.3;
   }
   .hsmc-accordion-body {
-    padding: 4px 18px 18px;
+    padding: 16px 4px;
+    background: #fafafa;
   }
   .hsmc-entry {
     padding: 12px 0;
@@ -269,7 +295,7 @@
   <div style="max-width: 700px; margin: 20px auto 60px; padding: 0 20px;">
 
     <details class="hsmc-accordion">
-      <summary>First Floor</summary>
+      <summary>First Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">Community Safety Office</p>
@@ -295,7 +321,7 @@
     </details>
 
     <details class="hsmc-accordion">
-      <summary>Second Floor</summary>
+      <summary>Second Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">Multi Faith / Spiritual Reflection Room</p>
@@ -313,7 +339,7 @@
     </details>
 
     <details class="hsmc-accordion">
-      <summary>Third Floor</summary>
+      <summary>Third Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">Library Administrative Space</p>
@@ -340,7 +366,7 @@
     </details>
 
     <details class="hsmc-accordion">
-      <summary>Fifth Floor</summary>
+      <summary>Fifth Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">AED</p>
@@ -352,7 +378,7 @@
     </details>
 
     <details class="hsmc-accordion">
-      <summary>Sixth Floor</summary>
+      <summary>Sixth Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">Preparation Room Physics</p>
@@ -403,7 +429,7 @@
     </details>
 
     <details class="hsmc-accordion">
-      <summary>Seventh Floor</summary>
+      <summary>Seventh Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">AED</p>
@@ -421,7 +447,7 @@
     </details>
 
     <details class="hsmc-accordion">
-      <summary>Ninth and Tenth Floor</summary>
+      <summary>Ninth and Tenth Floor<span class="hsmc-accordion-icon"></span></summary>
       <div class="hsmc-accordion-body">
         <div class="hsmc-entry">
           <p class="hsmc-loc-detail">Not accessible to community members.</p>
