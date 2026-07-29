@@ -151,16 +151,37 @@
     line-height: 1.3;
   }
   .hsmc-accordion-body {
-    padding: 0 18px 16px;
+    padding: 4px 18px 18px;
   }
-  .hsmc-accordion-body p {
-    margin: 10px 0 4px;
-    font-weight: 500;
+  .hsmc-entry {
+    padding: 12px 0;
   }
-  .hsmc-accordion-body ul {
-    margin: 0 0 10px;
-    padding-left: 20px;
+  .hsmc-entry + .hsmc-entry {
+    border-top: 1px solid #eee;
+  }
+  .hsmc-loc-label {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #212529;
+  }
+  .hsmc-loc-detail {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
     color: #495057;
+  }
+  .hsmc-entry-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #495057;
+  }
+  .hsmc-entry-list li {
+    margin-bottom: 4px;
+  }
+  .hsmc-entry-list li:last-child {
+    margin-bottom: 0;
   }
 </style>
 
@@ -238,102 +259,168 @@
   <hr style="max-width: 900px; margin: 50px auto; border: none; border-top: 1px solid #e5e5e5;">
 
   <h2 class="hsmc-heading hsmc-section-title">Resources Across the Building</h2>
+  <p class="hsmc-note" style="text-align: center; margin: -20px 0 20px;">AED = Automated External Defibrillator</p>
 
   <div style="max-width: 700px; margin: 20px auto 60px; padding: 0 20px;">
 
     <details class="hsmc-accordion">
       <summary>First Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>MKH 1001 - Community Safety Office</p>
-        <ul>
-          <li>AED</li>
-          <li>First Aid Kit</li>
-        </ul>
-        <p>Health and Safety Board - between Electrical Room(1210) and 1014</p>
-        <p>Emergency Safety Phone -</p>
-        <ul>
-          <li>Elevator Lobby Floor 1</li>
-        </ul>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Community Safety Office</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 1001</li>
+            <li>AED</li>
+            <li>First Aid Kit</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Health and Safety Board</p>
+          <ul class="hsmc-entry-list">
+            <li>Between Electrical Room (1210) and 1014</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Emergency Safety Phone</p>
+          <ul class="hsmc-entry-list">
+            <li>Elevator Lobby</li>
+          </ul>
+        </div>
       </div>
     </details>
 
     <details class="hsmc-accordion">
       <summary>Second Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>Multi Faith / Spiritual Reflection Room - 2000</p>
-        <p>AED located between Female(2505) and Accessible Washroom(2500)</p>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Multi Faith / Spiritual Reflection Room</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 2000</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">AED</p>
+          <ul class="hsmc-entry-list">
+            <li>Between Female (2505) and Accessible Washroom (2500)</li>
+          </ul>
+        </div>
       </div>
     </details>
 
     <details class="hsmc-accordion">
       <summary>Third Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>MKH 3025C Library Administrative Space</p>
-        <ul>
-          <li>Health and Safety Board</li>
-          <li>First Aid Kit</li>
-        </ul>
-        <p>AED located between Female(3505) and Accessible Washroom(3500)</p>
-        <p>Emergency Safety Phone -</p>
-        <ul>
-          <li>Elevator Lobby</li>
-          <li>Stairwell - C</li>
-        </ul>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Library Administrative Space</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 3025C</li>
+            <li>Health and Safety Board</li>
+            <li>First Aid Kit</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">AED</p>
+          <ul class="hsmc-entry-list">
+            <li>Between Female (3505) and Accessible Washroom (3500)</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Emergency Safety Phone</p>
+          <ul class="hsmc-entry-list">
+            <li>Elevator Lobby</li>
+            <li>Stairwell - C</li>
+          </ul>
+        </div>
       </div>
     </details>
 
     <details class="hsmc-accordion">
       <summary>Fifth Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>AED located between Female(5505) and Accessible Washroom(5500)</p>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">AED</p>
+          <ul class="hsmc-entry-list">
+            <li>Between Female (5505) and Accessible Washroom (5500)</li>
+          </ul>
+        </div>
       </div>
     </details>
 
     <details class="hsmc-accordion">
       <summary>Sixth Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>MKH 6036 - Preparation Room Physics</p>
-        <ul>
-          <li>Eye Wash</li>
-        </ul>
-        <p>MKH 6040 - Science Dep. Office</p>
-        <ul>
-          <li>First Aid</li>
-        </ul>
-        <p>MKH 6045 - Biology Lab</p>
-        <ul>
-          <li>Emergency Eye Wash</li>
-          <li>Emergency Shower</li>
-        </ul>
-        <p>MKH 6050 - Preparation Room Biology</p>
-        <ul>
-          <li>Emergency Eye Wash</li>
-        </ul>
-        <p>MKH 6060 - Preparation Room Chemistry</p>
-        <ul>
-          <li>Emergency Eye Wash</li>
-          <li>Emergency Shower</li>
-        </ul>
-        <p>MKH 6065 - Chemistry Lab</p>
-        <ul>
-          <li>Emergency Eye Wash</li>
-          <li>Emergency Shower</li>
-        </ul>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Preparation Room Physics</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 6036</li>
+            <li>Eye Wash</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Science Dep. Office</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 6040</li>
+            <li>First Aid</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Biology Lab</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 6045</li>
+            <li>Emergency Eye Wash</li>
+            <li>Emergency Shower</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Preparation Room Biology</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 6050</li>
+            <li>Emergency Eye Wash</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Preparation Room Chemistry</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 6060</li>
+            <li>Emergency Eye Wash</li>
+            <li>Emergency Shower</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Chemistry Lab</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 6065</li>
+            <li>Emergency Eye Wash</li>
+            <li>Emergency Shower</li>
+          </ul>
+        </div>
       </div>
     </details>
 
     <details class="hsmc-accordion">
       <summary>Seventh Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>AED located between Female(7505) and Accessible Washroom(7500)</p>
-        <p>Health and Safety Board located in 7078</p>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">AED</p>
+          <ul class="hsmc-entry-list">
+            <li>Between Female (7505) and Accessible Washroom (7500)</li>
+          </ul>
+        </div>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-label">Health and Safety Board</p>
+          <ul class="hsmc-entry-list">
+            <li>MKH 7078</li>
+          </ul>
+        </div>
       </div>
     </details>
 
     <details class="hsmc-accordion">
       <summary>Ninth and Tenth Floor</summary>
       <div class="hsmc-accordion-body">
-        <p>Not accessible to community members.</p>
+        <div class="hsmc-entry">
+          <p class="hsmc-loc-detail">Not accessible to community members.</p>
+        </div>
       </div>
     </details>
 
