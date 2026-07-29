@@ -6,19 +6,31 @@
     color: #212529;
     line-height: 1.6;
   }
-  .hsmc-wrap h1 {
-    font-size: 20px;
+  .hsmc-heading {
+    position: relative;
+    text-align: center;
     font-weight: 600;
     color: #212529;
-    text-align: center;
-    margin: 0 0 16px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #e31837;
-    display: inline-block;
+    margin: 0 0 28px;
+    padding-bottom: 14px;
   }
-  .hsmc-heading-row {
-    text-align: center;
-    margin-bottom: 20px;
+  .hsmc-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: #e31837;
+    transform: translateX(-50%);
+  }
+  .hsmc-card-title {
+    font-size: 18px;
+  }
+  .hsmc-section-title {
+    font-size: 26px;
+    margin-bottom: 32px;
   }
   .hsmc-card {
     background: #ffffff;
@@ -28,9 +40,6 @@
     padding: 24px 20px;
     max-width: 300px;
     flex: 1 1 260px;
-  }
-  .hsmc-card + h1 {
-    margin-top: 32px;
   }
   .hsmc-card ul {
     list-style: none;
@@ -178,7 +187,7 @@
   <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 50px; padding: 0 20px;">
 
     <div class="hsmc-card">
-      <div class="hsmc-heading-row"><h1>General</h1></div>
+      <h3 class="hsmc-heading hsmc-card-title">General</h3>
       <ul>
         <li><a href="https://yulink-new.yorku.ca/group/yulink/first-aid-program?p_p_auth=MWBfC0oY&p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=/asset_publisher/view_content&_101_returnToFullPageURL=/group/yulink/first-aid-program?inheritRedirect%3Dtrue&_101_assetEntryId=1359554&_101_type=document&_101_showComments=true&_101_redirect=https://yulink-new.yorku.ca/group/yulink/first-aid-program?p_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_yorku-default-search%3Dtrue%26_3_keywords%3Dhealth%2Bbulleting%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fgroup%252Fyulink%252Ffirst-aid-program%253FinheritRedirect%253Dtrue%26_3_yorku-groupid%3D0" target="_blank">Health and Safety Bulletin Boards</a></li>
         <li><a href="https://yulink-new.yorku.ca/group/yulink/working-alone-program1" target="_blank">Working Alone Program</a><br><span class="hsmc-note">(there is a form in this)</span></li>
@@ -188,7 +197,7 @@
     </div>
 
     <div class="hsmc-card">
-      <div class="hsmc-heading-row"><h1>Lab Safety</h1></div>
+      <h3 class="hsmc-heading hsmc-card-title">Lab Safety</h3>
       <ul>
         <li><a href="https://yulink-new.yorku.ca/documents/20182/92034/Eyewash+and+Emergency+Shower+Guideline/97ee377e-71ad-4a1b-8e0a-533579080049" target="_blank">Eyewash and Emergency Shower Guideline</a></li>
         <li><a href="http://yulink-new.yorku.ca/documents/20182/29507656/YU+LABORATORY+DESIGN+GUIDELINES.pdf/f9b817e7-5a17-4566-bd58-f493da05c2d0" target="_blank">Lab Design Guidelines</a></li>
@@ -197,14 +206,14 @@
     </div>
 
     <div class="hsmc-card">
-      <div class="hsmc-heading-row"><h1>Forms</h1></div>
+      <h3 class="hsmc-heading hsmc-card-title">Forms</h3>
       <ul>
         <li><a href="https://yulink-new.yorku.ca/documents/872311/0/Workplace+Incident+Report+%28WIR%29+-+July+2019.pdf/85f23d92-5aff-4f7d-ab33-c467c4ec3a38" target="_blank">Workplace Incident Report</a></li>
       </ul>
     </div>
 
     <div class="hsmc-card">
-      <div class="hsmc-heading-row"><h1>Programs</h1></div>
+      <h3 class="hsmc-heading hsmc-card-title">Programs</h3>
       <ul>
         <li><a href="https://yulink-new.yorku.ca/documents/20182/1360664/First+Aid+Program/b1ac5adb-1d09-4985-bb0b-ec0155717dde" target="_blank">First Aid Program</a></li>
         <li><a href="https://yulink-new.yorku.ca/group/yulink/biosafety" target="_blank">Biosafety Resources</a></li>
@@ -216,7 +225,7 @@
     </div>
 
     <div class="hsmc-card">
-      <div class="hsmc-heading-row"><h1>Other Resources</h1></div>
+      <h3 class="hsmc-heading hsmc-card-title">Other Resources</h3>
       <ul>
         <li><a href="http://yulink-new.yorku.ca/documents/20182/6878449/Employee+Incident+Process+Flow+Chart/bdd19993-277f-48ae-a0d2-9e5843c44c30" target="_blank">Incident Process Flow Chart</a></li>
         <li><a href="https://yulink-new.yorku.ca/group/yulink/reporting-workplace-injuries-accidents" target="_blank">Incident Reporting Employee</a><br><span class="hsmc-note">(<i>Passport York Required</i>)</span></li>
@@ -228,7 +237,7 @@
 
   <hr style="max-width: 900px; margin: 50px auto; border: none; border-top: 1px solid #e5e5e5;">
 
-  <div class="hsmc-heading-row"><h1>Resources Across the Building</h1></div>
+  <h2 class="hsmc-heading hsmc-section-title">Resources Across the Building</h2>
 
   <div style="max-width: 700px; margin: 20px auto 60px; padding: 0 20px;">
 
