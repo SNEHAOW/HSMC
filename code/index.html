@@ -5,6 +5,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     color: #212529;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   .hsmc-heading {
     position: relative;
@@ -210,6 +211,50 @@
   .hsmc-entry-list li:last-child {
     margin-bottom: 0;
   }
+  .hsmc-dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+  .hsmc-dialog::backdrop {
+    background: rgba(0,0,0,0.6);
+  }
+  .hsmc-dialog-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background: #e31837;
+  }
+  .hsmc-dialog-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .hsmc-dialog-close:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  .hsmc-dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(90vh - 46px);
+    width: auto;
+    height: auto;
+  }
+  .hsmc-img-trigger {
+    cursor: pointer;
+    color: #e31837;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
 </style>
 
 <div class="hsmc-wrap">
@@ -312,13 +357,13 @@
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">Health and Safety Board</p>
           <ul class="hsmc-entry-list">
-            <li>Between Electrical Room (1210) and 1014</li>
+            <li><a href="../resources/hs_board.jpg" target="_blank" class="hsmc-img-trigger">Between Electrical Room (1210) and 1014</a></li>
           </ul>
         </div>
         <div class="hsmc-entry">
           <p class="hsmc-loc-label">Emergency Safety Phone</p>
           <ul class="hsmc-entry-list">
-            <li>Elevator Lobby</li>
+            <li><span class="hsmc-img-trigger" onclick="hsmcOpenImageDialog('../resources/emergency_phone_1st.jpg', 'Health and Safety Board - Elevator Lobby')">Elevator Lobby</span></li>
           </ul>
         </div>
       </div>
@@ -460,5 +505,24 @@
     </details>
 
   </div>
+
+  <dialog id="hsmc-image-dialog" class="hsmc-dialog">
+    <div class="hsmc-dialog-header">
+      <button class="hsmc-dialog-close" onclick="document.getElementById('hsmc-image-dialog').close()" aria-label="Close">&times;</button>
+    </div>
+    <img id="hsmc-image-dialog-img" src="" alt="">
+  </dialog>
+
+  <script>
+    function hsmcOpenImageDialog(src, alt) {
+      var img = document.getElementById('hsmc-image-dialog-img');
+      img.src = src;
+      img.alt = alt || '';
+      document.getElementById('hsmc-image-dialog').showModal();
+    }
+    document.getElementById('hsmc-image-dialog').addEventListener('click', function(e) {
+      if (e.target === this) this.close();
+    });
+  </script>
 
 </div>
